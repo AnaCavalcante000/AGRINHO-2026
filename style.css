@@ -1,1 +1,256 @@
+/* ==========================
+   CONFIGURAÇÕES GERAIS
+========================== */
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+header{
+    background-color: #2e7d32;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h1{
+    font-size: 1.8rem;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav ul li a:hover{
+    color: #c8e6c9;
+}
+
+/* ==========================
+   BANNER
+========================== */
+
+.banner{
+    height: 90vh;
+    background: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url('../img/banner.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    color: white;
+}
+
+.banner-content h2{
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.banner-content p{
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.btn{
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background-color: #388e3c;
+}
+
+/* ==========================
+   SEÇÕES
+========================== */
+
+section{
+    padding: 80px 0;
+}
+
+section h2{
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2e7d32;
+}
+
+.introducao,
+.desafios,
+.solucoes{
+    text-align: center;
+}
+
+/* ==========================
+   CARDS
+========================== */
+
+.cards{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card{
+    background: white;
+    width: 300px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+}
+
+.card h3{
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+/* ==========================
+   GALERIA
+========================== */
+
+.galeria{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.item{
+    background-color: #4caf50;
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+    min-width: 250px;
+    font-weight: bold;
+}
+
+/* ==========================
+   FORMULÁRIO
+========================== */
+
+form{
+    max-width: 600px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+textarea{
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+textarea{
+    min-height: 150px;
+    resize: vertical;
+}
+
+button{
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+button:hover{
+    background-color: #1b5e20;
+}
+
+/* ==========================
+   RODAPÉ
+========================== */
+
+footer{
+    background-color: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ==========================
+   RESPONSIVIDADE
+========================== */
+
+@media(max-width: 768px){
+
+    header{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .banner-content h2{
+        font-size: 2rem;
+    }
+
+    .cards{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card{
+        width: 90%;
+    }
+}
